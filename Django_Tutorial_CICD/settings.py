@@ -70,15 +70,27 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "Django_Tutorial_CICD.wsgi.application"
+# WSGI_APPLICATION = "Django_Tutorial_CICD.wsgi.application"
+WSGI_APPLICATION = "Django_Tutorial_CICD.wsgi.app"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'neondb',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'npg_Q2qV1IeYlJMg',
+        'HOST': 'ep-soft-hill-a78ddcei-pooler.ap-southeast-2.aws.neon.tech',
+        'PORT': 5432,
     }
 }
 
